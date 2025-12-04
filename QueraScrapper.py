@@ -36,7 +36,7 @@ QUERA_EMAIL = "Youremail"
 QUERA_PASSWORD = "YourPass"
 
 # OpenRouter API
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "sk-or-v..."
 
 # GitHub Configuration
 GITHUB_USERNAME = "VictimPickle"
