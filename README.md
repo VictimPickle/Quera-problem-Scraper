@@ -1,74 +1,85 @@
-# Quera Problems Scraper & Organizer
+# Quera Problem Scraper
 
-A complete end-to-end pipeline for scraping, summarizing, categorizing,
-and organizing **Quera** programming problems --- fully automated using
-Selenium + AI + GitHub integration.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Selenium](https://img.shields.io/badge/Tool-Selenium-green)]()
 
-This tool is designed for competitive programmers, students, and anyone
-who wants a clean, structured archive of their solved problems.
+**Automated Problem Scraper & Repository Generator** - Scrapes Quera courses, generates AI summaries (English & Persian), organizes problems by category, and uploads to GitHub.
 
-------------------------------------------------------------------------
+## 📊 Overview
 
-## 🚀 Features
+Automates competitive programming practice by:
+- 🔗 Scraping Quera problem descriptions & solutions
+- 👌 Generating AI summaries in multiple languages
+- 📁 Organizing problems by difficulty & category
+- 🔧 Creating well-structured repository
+- 🤖 Automating GitHub uploads
 
-### 🔍 Scraping Automation
+## 🛠️ Technologies
 
--   Logs into your Quera account (supports cookies)
--   Iterates through selected **courses**, **assignments**, and
-    **problems**
--   Saves each problem statement as `statement.txt`
+```
+Python | Selenium | BeautifulSoup | GitHub API | Requests
+```
 
-### 🤖 AI-Powered Processing
+## ✨ Features
 
-For every scraped problem: - Removes unnecessary story/context\
-- Extracts the **core problem description** - Generates a **clean
-English + Persian summary** - Classifies the problem into **one of 10
-algorithmic categories** (DP, Graph, Greedy, etc.)
+- **Web Scraping:** Automated data extraction from Quera
+- **AI Summaries:** English & Persian problem summaries
+- **Auto-Organization:** Problems grouped by:
+  - Difficulty level
+  - Algorithm category
+  - Topic area
+- **GitHub Integration:** Automatic repo creation & updates
+- **Batch Processing:** Handle multiple courses efficiently
 
-### 📦 Folder Organization
+## 🚀 Quick Start
 
-Each problem gets its own directory containing: - `README.md` →
-AI-generated bilingual problem summary\
-- `solution.*` → Your solution code (C/C++/Python/...)
+```bash
+git clone https://github.com/VictimPickle/Quera-problem-Scraper.git
+cd Quera-problem-Scraper
+pip install selenium beautifulsoup4 requests gitpython
+python scraper.py --course <course_id>
+```
 
-Statements remain **local only** and are ignored by Git.
+## 🔘️ Usage
 
-### ☁️ GitHub Auto-Uploader
+```bash
+# Scrape specific course
+python scraper.py --course 12345
 
-Automatically: - Initializes a Git repo inside `organized_problems/` -
-Commits only **READMEs + code** - Pushes to your GitHub repo\
-(example: `VictimPickle/Problems-solved`)
+# Scrape with AI summaries
+python scraper.py --course 12345 --summarize --lang en_fa
 
-------------------------------------------------------------------------
+# Auto-upload to GitHub
+python scraper.py --course 12345 --upload-github
+```
 
-## 📂 Output Structure
+## 📁 Output Structure
 
-    organized_problems/
-    ├── README.md
-    ├── .gitignore
-    ├── 01_Linear_Data_Structures/
-    │   ├── some_problem/
-    │   │   ├── README.md
-    │   │   └── solution.c
-    │   └── ...
-    ├── 08_Dynamic_Programming/
-    │   ├── fibonacci/
-    │   │   ├── README.md
-    │   │   └── solution.py
-    └── 10_Geometric_Mathematical/
-        └── ...
+```
+quera-problems/
+├── dynamic-programming/
+│   ├── easy/
+│   │   └── problem-1.md
+│   ├── medium/
+│   │   └── problem-2.md
+│   └── hard/
+├── graphs/
+├── README.md
+└── index.json
+```
 
-------------------------------------------------------------------------
+## 💡 Key Features
 
-## ⚠️ Note
+1. **Smart Scraping** - Handles dynamic content, authentication
+2. **Language Support** - Persian/English summaries
+3. **Category Detection** - Auto-identifies problem category
+4. **Error Handling** - Robust retry & fallback mechanisms
+5. **Progress Tracking** - Real-time scraping updates
 
-This project is for **educational use only**.\
-All original problems belong to Quera.org. Please respect their terms of
-service.
+## 📚 Documentation
 
-------------------------------------------------------------------------
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup.
 
-## 👤 Author
+---
 
-**VictimPickle**\
-GitHub: https://github.com/VictimPickle
+**Created by:** Mobin Ghorbani | December 2025
